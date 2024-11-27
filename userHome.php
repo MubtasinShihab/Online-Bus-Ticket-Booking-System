@@ -26,9 +26,7 @@
 </head>
 
 <body>
-    created repo
-    new branch - Staging
-    Individual branch "Shihab" created
+    <?php include 'navbar.php'; ?>
 </body>
 
 </html>
