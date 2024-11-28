@@ -1,32 +1,26 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
+<?php
+session_start();
+if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
+    $user_id = $_SESSION['user_id'];
+    if(!isset($user_id)){
+        header('Location: login.php');
+        exit();
+    }
+}
+ include 'header.php';
+?>
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+        <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+        </a>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+            <a href="tel:5541251234"
+                class="text-sm  text-gray-500 dark:text-white hover:underline"><?= $_SESSION['user_email']; ?></a>
+            <a href="logout.php" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Logout</a>
+        </div>
+    </div>
+<!-- User Home Page with html and css -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <style>
-        .font-inter {
-            font-family: "Inter", sans-serif;
-        }
-
-        .font-raleway {
-            font-family: "Raleway", sans-serif;
-        }
-    </style>
-
-</head>
-
-<body>
-    created repo
-</body>
-
-</html>
+<?php include 'footer.php';?>

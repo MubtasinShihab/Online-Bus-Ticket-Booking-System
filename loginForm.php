@@ -1,4 +1,4 @@
-<form method="post" action="" class="max-w-sm mx-auto">
+<form method="post" action="loginHandler.php" class="max-w-sm mx-auto">
 <div class="mb-5">
         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
         <input type="email" id="email" name="email"
