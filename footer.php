@@ -7,9 +7,9 @@
             </path>
         </svg>
         <p>
-            ACME Industries Ltd.
+            P Travels
             <br />
-            Providing reliable tech since 1992
+            Providing reliable service since 1992
         </p>
     </aside>
     <nav>

@@ -75,7 +75,7 @@
     </header>
 
     <main>
-        <!-- Extras -->
+        <!-- Extras 1 -->
         <section class="text-center"><!-- Coupon Section -->
 
             <!-- Title -->
@@ -104,7 +104,7 @@
                         </p>
                     </div>
 
-                    <img src="https://i.ibb.co.com/pWVQZ4D/cupon-devider.png" alt="">
+                    <img src="https://i.ibb.co.com/WkfpPQ5/cupon-devider.png" alt="">
 
                     <div class="relative right-6">
                         <p class="font-raleway items-center mt-[80px]">
@@ -137,7 +137,7 @@
                         </p>
                     </div>
 
-                    <img src="https://i.ibb.co.com/pWVQZ4D/cupon-devider.png" alt="">
+                    <img src="https://i.ibb.co.com/WkfpPQ5/cupon-devider.png" alt="">
 
                     <div class="relative right-6">
                         <p class="font-raleway items-center mt-[80px]">
@@ -171,7 +171,7 @@
                         </p>
                     </div>
 
-                    <img src="https://i.ibb.co.com/pWVQZ4D/cupon-devider.png" alt="">
+                    <img src="https://i.ibb.co.com/WkfpPQ5/cupon-devider.png" alt="">
 
                     <div class="relative right-6">
                         <p class="font-raleway items-center mt-[80px]">
@@ -219,6 +219,383 @@
         <!-- Search Panel -->
         <section id="ticketPanel" class="bg-white pb-16">
             <?php include 'searchPanel.php'; ?>
+        </section>
+
+        <!-- Extras 2 -->
+        <section>
+            <div>
+                <img class="mb-16" src="https://i.ibb.co.com/7k6r7q4/Ticket.jpg" alt="">
+
+                <!-- Popular Bus Routes -->
+                <p class="text-center font-raleway mb-10 text-4xl font-bold">Popular Bus Routes</h1>
+                <div class="grid grid-cols-3 gap-4 mb-16 max-w-7xl mx-auto">
+                    <!-- Routes -->
+                    <div class="btn w-[420px] h-20 gap-[80px]">
+                        <div>
+                            <p class="font-bold text-xl">DHK</p>
+                            <p class="text-sm font-light">Dhaka</p>
+                        </div>
+                        <svg class="w-8 h-8" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 80.3 80.3" style="enable-background:new 0 0 80.3 80.3" xml:space="preserve">
+                            <style>
+                                .st4 {
+                                    fill: #0c2c48
+                                }
+
+                                .st7 {
+                                    fill: #2f4555
+                                }
+
+                                .st12 {
+                                    fill: #f1cc4b
+                                }
+                            </style>
+                            <circle transform="rotate(-.146 40.174 40.16)" cx="40.2" cy="40.2" style="fill:#55ab99" r="40.2" />
+                            <path class="st4" d="M20.4 32.5c0 1.4-1.1 2.6-2.5 2.6h-1.7c-1.4 0-2.6-1.1-2.6-2.5v-7.4c0-1.4 1.1-2.6 2.5-2.6h1.7c1.4 0 2.6 1.1 2.6 2.5v7.4z" />
+                            <path class="st4" d="M17.5 26.4h-.9v-7.5l4.2-2.5.5.7-3.9 2.3zM59.9 32.4c0 1.4 1.2 2.6 2.6 2.5h1.7c1.4 0 2.6-1.1 2.5-2.6v-7.4c0-1.4-1.2-2.6-2.6-2.5h-1.7c-1.4 0-2.6 1.1-2.5 2.6v7.4z" />
+                            <path class="st4" d="M62.8 26.2h.8v-7.4l-4.2-2.5-.5.7 3.9 2.3z" />
+                            <path transform="rotate(-.15 24.82 65.362)" class="st4" d="M22 62.2h5.6v6.4H22z" />
+                            <path transform="matrix(1 -.00262 .00262 1 -.17 .146)" class="st4" d="M52.9 62.1h5.6v6.4h-5.6z" />
+                            <path class="st7" d="M61.1 60.4 61 17.6c0-1.4-1.2-2.6-2.6-2.5l-36.6.1c-1.4 0-2.6 1.2-2.5 2.6l.1 42.8 41.7-.2z" />
+                            <path style="fill:#81caff" d="M22.2 24H59v16.5H22.2z" />
+                            <g>
+                                <path transform="rotate(-.144 24.877 53.03)" class="st12" d="M20.4 50.7h8.9v4.7h-8.9z" />
+                                <path transform="matrix(1 -.00252 .00252 1 -.133 .14)" class="st12" d="M51.1 50.6H60v4.7h-8.9z" />
+                            </g>
+                            <path class="st7" d="m41.2 42.5-2.1.1.8-20.6h.4z" />
+                            <path transform="matrix(1 -.00254 .00254 1 -.155 .102)" style="fill:#babfc5" d="M17.1 59.6h46.2v2.8H17.1z" />
+                        </svg>
+                        <div>
+                            <p class="font-bold text-xl">CTG</p>
+                            <p class="text-sm font-light">Chittagong</p>
+                        </div>
+                    </div>
+
+                    <div class="btn w-[420px] h-20 gap-[80px]">
+                        <div>
+                            <p class="font-bold text-xl">CTG</p>
+                            <p class="text-sm font-light">Chittagong</p>
+                        </div>
+                        <svg class="w-8 h-8" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 80.3 80.3" style="enable-background:new 0 0 80.3 80.3" xml:space="preserve">
+                            <style>
+                                .st4 {
+                                    fill: #0c2c48
+                                }
+
+                                .st7 {
+                                    fill: #2f4555
+                                }
+
+                                .st12 {
+                                    fill: #f1cc4b
+                                }
+                            </style>
+                            <circle transform="rotate(-.146 40.174 40.16)" cx="40.2" cy="40.2" style="fill:#55ab99" r="40.2" />
+                            <path class="st4" d="M20.4 32.5c0 1.4-1.1 2.6-2.5 2.6h-1.7c-1.4 0-2.6-1.1-2.6-2.5v-7.4c0-1.4 1.1-2.6 2.5-2.6h1.7c1.4 0 2.6 1.1 2.6 2.5v7.4z" />
+                            <path class="st4" d="M17.5 26.4h-.9v-7.5l4.2-2.5.5.7-3.9 2.3zM59.9 32.4c0 1.4 1.2 2.6 2.6 2.5h1.7c1.4 0 2.6-1.1 2.5-2.6v-7.4c0-1.4-1.2-2.6-2.6-2.5h-1.7c-1.4 0-2.6 1.1-2.5 2.6v7.4z" />
+                            <path class="st4" d="M62.8 26.2h.8v-7.4l-4.2-2.5-.5.7 3.9 2.3z" />
+                            <path transform="rotate(-.15 24.82 65.362)" class="st4" d="M22 62.2h5.6v6.4H22z" />
+                            <path transform="matrix(1 -.00262 .00262 1 -.17 .146)" class="st4" d="M52.9 62.1h5.6v6.4h-5.6z" />
+                            <path class="st7" d="M61.1 60.4 61 17.6c0-1.4-1.2-2.6-2.6-2.5l-36.6.1c-1.4 0-2.6 1.2-2.5 2.6l.1 42.8 41.7-.2z" />
+                            <path style="fill:#81caff" d="M22.2 24H59v16.5H22.2z" />
+                            <g>
+                                <path transform="rotate(-.144 24.877 53.03)" class="st12" d="M20.4 50.7h8.9v4.7h-8.9z" />
+                                <path transform="matrix(1 -.00252 .00252 1 -.133 .14)" class="st12" d="M51.1 50.6H60v4.7h-8.9z" />
+                            </g>
+                            <path class="st7" d="m41.2 42.5-2.1.1.8-20.6h.4z" />
+                            <path transform="matrix(1 -.00254 .00254 1 -.155 .102)" style="fill:#babfc5" d="M17.1 59.6h46.2v2.8H17.1z" />
+                        </svg>
+                        <div>
+                            <p class="font-bold text-xl">DHK</p>
+                            <p class="text-sm font-light">Dhaka</p>
+                        </div>
+                    </div>
+
+                    <div class="btn w-[420px] h-20 gap-[80px]">
+                        <div>
+                            <p class="font-bold text-xl">DHK</p>
+                            <p class="text-sm font-light">Dhaka</p>
+                        </div>
+                        <svg class="w-8 h-8" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 80.3 80.3" style="enable-background:new 0 0 80.3 80.3" xml:space="preserve">
+                            <style>
+                                .st4 {
+                                    fill: #0c2c48
+                                }
+
+                                .st7 {
+                                    fill: #2f4555
+                                }
+
+                                .st12 {
+                                    fill: #f1cc4b
+                                }
+                            </style>
+                            <circle transform="rotate(-.146 40.174 40.16)" cx="40.2" cy="40.2" style="fill:#55ab99" r="40.2" />
+                            <path class="st4" d="M20.4 32.5c0 1.4-1.1 2.6-2.5 2.6h-1.7c-1.4 0-2.6-1.1-2.6-2.5v-7.4c0-1.4 1.1-2.6 2.5-2.6h1.7c1.4 0 2.6 1.1 2.6 2.5v7.4z" />
+                            <path class="st4" d="M17.5 26.4h-.9v-7.5l4.2-2.5.5.7-3.9 2.3zM59.9 32.4c0 1.4 1.2 2.6 2.6 2.5h1.7c1.4 0 2.6-1.1 2.5-2.6v-7.4c0-1.4-1.2-2.6-2.6-2.5h-1.7c-1.4 0-2.6 1.1-2.5 2.6v7.4z" />
+                            <path class="st4" d="M62.8 26.2h.8v-7.4l-4.2-2.5-.5.7 3.9 2.3z" />
+                            <path transform="rotate(-.15 24.82 65.362)" class="st4" d="M22 62.2h5.6v6.4H22z" />
+                            <path transform="matrix(1 -.00262 .00262 1 -.17 .146)" class="st4" d="M52.9 62.1h5.6v6.4h-5.6z" />
+                            <path class="st7" d="M61.1 60.4 61 17.6c0-1.4-1.2-2.6-2.6-2.5l-36.6.1c-1.4 0-2.6 1.2-2.5 2.6l.1 42.8 41.7-.2z" />
+                            <path style="fill:#81caff" d="M22.2 24H59v16.5H22.2z" />
+                            <g>
+                                <path transform="rotate(-.144 24.877 53.03)" class="st12" d="M20.4 50.7h8.9v4.7h-8.9z" />
+                                <path transform="matrix(1 -.00252 .00252 1 -.133 .14)" class="st12" d="M51.1 50.6H60v4.7h-8.9z" />
+                            </g>
+                            <path class="st7" d="m41.2 42.5-2.1.1.8-20.6h.4z" />
+                            <path transform="matrix(1 -.00254 .00254 1 -.155 .102)" style="fill:#babfc5" d="M17.1 59.6h46.2v2.8H17.1z" />
+                        </svg>
+                        <div>
+                            <p class="font-bold text-xl">KHL</p>
+                            <p class="text-sm font-light">Khulna</p>
+                        </div>
+                    </div>
+
+                    <div class="btn w-[420px] h-20 gap-[80px]">
+                        <div>
+                            <p class="font-bold text-xl">KHL</p>
+                            <p class="text-sm font-light">Khulna</p>
+                        </div>
+                        <svg class="w-8 h-8" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 80.3 80.3" style="enable-background:new 0 0 80.3 80.3" xml:space="preserve">
+                            <style>
+                                .st4 {
+                                    fill: #0c2c48
+                                }
+
+                                .st7 {
+                                    fill: #2f4555
+                                }
+
+                                .st12 {
+                                    fill: #f1cc4b
+                                }
+                            </style>
+                            <circle transform="rotate(-.146 40.174 40.16)" cx="40.2" cy="40.2" style="fill:#55ab99" r="40.2" />
+                            <path class="st4" d="M20.4 32.5c0 1.4-1.1 2.6-2.5 2.6h-1.7c-1.4 0-2.6-1.1-2.6-2.5v-7.4c0-1.4 1.1-2.6 2.5-2.6h1.7c1.4 0 2.6 1.1 2.6 2.5v7.4z" />
+                            <path class="st4" d="M17.5 26.4h-.9v-7.5l4.2-2.5.5.7-3.9 2.3zM59.9 32.4c0 1.4 1.2 2.6 2.6 2.5h1.7c1.4 0 2.6-1.1 2.5-2.6v-7.4c0-1.4-1.2-2.6-2.6-2.5h-1.7c-1.4 0-2.6 1.1-2.5 2.6v7.4z" />
+                            <path class="st4" d="M62.8 26.2h.8v-7.4l-4.2-2.5-.5.7 3.9 2.3z" />
+                            <path transform="rotate(-.15 24.82 65.362)" class="st4" d="M22 62.2h5.6v6.4H22z" />
+                            <path transform="matrix(1 -.00262 .00262 1 -.17 .146)" class="st4" d="M52.9 62.1h5.6v6.4h-5.6z" />
+                            <path class="st7" d="M61.1 60.4 61 17.6c0-1.4-1.2-2.6-2.6-2.5l-36.6.1c-1.4 0-2.6 1.2-2.5 2.6l.1 42.8 41.7-.2z" />
+                            <path style="fill:#81caff" d="M22.2 24H59v16.5H22.2z" />
+                            <g>
+                                <path transform="rotate(-.144 24.877 53.03)" class="st12" d="M20.4 50.7h8.9v4.7h-8.9z" />
+                                <path transform="matrix(1 -.00252 .00252 1 -.133 .14)" class="st12" d="M51.1 50.6H60v4.7h-8.9z" />
+                            </g>
+                            <path class="st7" d="m41.2 42.5-2.1.1.8-20.6h.4z" />
+                            <path transform="matrix(1 -.00254 .00254 1 -.155 .102)" style="fill:#babfc5" d="M17.1 59.6h46.2v2.8H17.1z" />
+                        </svg>
+                        <div>
+                            <p class="font-bold text-xl">DHK</p>
+                            <p class="text-sm font-light">Dhaka</p>
+                        </div>
+                    </div>
+
+                    <div class="btn w-[420px] h-20 gap-[80px]">
+                        <div>
+                            <p class="font-bold text-xl">DHK</p>
+                            <p class="text-sm font-light">Dhaka</p>
+                        </div>
+                        <svg class="w-8 h-8" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 80.3 80.3" style="enable-background:new 0 0 80.3 80.3" xml:space="preserve">
+                            <style>
+                                .st4 {
+                                    fill: #0c2c48
+                                }
+
+                                .st7 {
+                                    fill: #2f4555
+                                }
+
+                                .st12 {
+                                    fill: #f1cc4b
+                                }
+                            </style>
+                            <circle transform="rotate(-.146 40.174 40.16)" cx="40.2" cy="40.2" style="fill:#55ab99" r="40.2" />
+                            <path class="st4" d="M20.4 32.5c0 1.4-1.1 2.6-2.5 2.6h-1.7c-1.4 0-2.6-1.1-2.6-2.5v-7.4c0-1.4 1.1-2.6 2.5-2.6h1.7c1.4 0 2.6 1.1 2.6 2.5v7.4z" />
+                            <path class="st4" d="M17.5 26.4h-.9v-7.5l4.2-2.5.5.7-3.9 2.3zM59.9 32.4c0 1.4 1.2 2.6 2.6 2.5h1.7c1.4 0 2.6-1.1 2.5-2.6v-7.4c0-1.4-1.2-2.6-2.6-2.5h-1.7c-1.4 0-2.6 1.1-2.5 2.6v7.4z" />
+                            <path class="st4" d="M62.8 26.2h.8v-7.4l-4.2-2.5-.5.7 3.9 2.3z" />
+                            <path transform="rotate(-.15 24.82 65.362)" class="st4" d="M22 62.2h5.6v6.4H22z" />
+                            <path transform="matrix(1 -.00262 .00262 1 -.17 .146)" class="st4" d="M52.9 62.1h5.6v6.4h-5.6z" />
+                            <path class="st7" d="M61.1 60.4 61 17.6c0-1.4-1.2-2.6-2.6-2.5l-36.6.1c-1.4 0-2.6 1.2-2.5 2.6l.1 42.8 41.7-.2z" />
+                            <path style="fill:#81caff" d="M22.2 24H59v16.5H22.2z" />
+                            <g>
+                                <path transform="rotate(-.144 24.877 53.03)" class="st12" d="M20.4 50.7h8.9v4.7h-8.9z" />
+                                <path transform="matrix(1 -.00252 .00252 1 -.133 .14)" class="st12" d="M51.1 50.6H60v4.7h-8.9z" />
+                            </g>
+                            <path class="st7" d="m41.2 42.5-2.1.1.8-20.6h.4z" />
+                            <path transform="matrix(1 -.00254 .00254 1 -.155 .102)" style="fill:#babfc5" d="M17.1 59.6h46.2v2.8H17.1z" />
+                        </svg>
+                        <div>
+                            <p class="font-bold text-xl">STK</p>
+                            <p class="text-sm font-light">Satkhira</p>
+                        </div>
+                    </div>
+
+                    <div class="btn w-[420px] h-20 gap-[80px]">
+                        <div>
+                            <p class="font-bold text-xl">STK</p>
+                            <p class="text-sm font-light">Satkhira</p>
+                        </div>
+                        <svg class="w-8 h-8" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 80.3 80.3" style="enable-background:new 0 0 80.3 80.3" xml:space="preserve">
+                            <style>
+                                .st4 {
+                                    fill: #0c2c48
+                                }
+
+                                .st7 {
+                                    fill: #2f4555
+                                }
+
+                                .st12 {
+                                    fill: #f1cc4b
+                                }
+                            </style>
+                            <circle transform="rotate(-.146 40.174 40.16)" cx="40.2" cy="40.2" style="fill:#55ab99" r="40.2" />
+                            <path class="st4" d="M20.4 32.5c0 1.4-1.1 2.6-2.5 2.6h-1.7c-1.4 0-2.6-1.1-2.6-2.5v-7.4c0-1.4 1.1-2.6 2.5-2.6h1.7c1.4 0 2.6 1.1 2.6 2.5v7.4z" />
+                            <path class="st4" d="M17.5 26.4h-.9v-7.5l4.2-2.5.5.7-3.9 2.3zM59.9 32.4c0 1.4 1.2 2.6 2.6 2.5h1.7c1.4 0 2.6-1.1 2.5-2.6v-7.4c0-1.4-1.2-2.6-2.6-2.5h-1.7c-1.4 0-2.6 1.1-2.5 2.6v7.4z" />
+                            <path class="st4" d="M62.8 26.2h.8v-7.4l-4.2-2.5-.5.7 3.9 2.3z" />
+                            <path transform="rotate(-.15 24.82 65.362)" class="st4" d="M22 62.2h5.6v6.4H22z" />
+                            <path transform="matrix(1 -.00262 .00262 1 -.17 .146)" class="st4" d="M52.9 62.1h5.6v6.4h-5.6z" />
+                            <path class="st7" d="M61.1 60.4 61 17.6c0-1.4-1.2-2.6-2.6-2.5l-36.6.1c-1.4 0-2.6 1.2-2.5 2.6l.1 42.8 41.7-.2z" />
+                            <path style="fill:#81caff" d="M22.2 24H59v16.5H22.2z" />
+                            <g>
+                                <path transform="rotate(-.144 24.877 53.03)" class="st12" d="M20.4 50.7h8.9v4.7h-8.9z" />
+                                <path transform="matrix(1 -.00252 .00252 1 -.133 .14)" class="st12" d="M51.1 50.6H60v4.7h-8.9z" />
+                            </g>
+                            <path class="st7" d="m41.2 42.5-2.1.1.8-20.6h.4z" />
+                            <path transform="matrix(1 -.00254 .00254 1 -.155 .102)" style="fill:#babfc5" d="M17.1 59.6h46.2v2.8H17.1z" />
+                        </svg>
+                        <div>
+                            <p class="font-bold text-xl">DHK</p>
+                            <p class="text-sm font-light">Dhaka</p>
+                        </div>
+                    </div>
+
+                    <div class="btn w-[420px] h-20 gap-[80px]">
+                        <div>
+                            <p class="font-bold text-xl">DHK</p>
+                            <p class="text-sm font-light">Dhaka</p>
+                        </div>
+                        <svg class="w-8 h-8" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 80.3 80.3" style="enable-background:new 0 0 80.3 80.3" xml:space="preserve">
+                            <style>
+                                .st4 {
+                                    fill: #0c2c48
+                                }
+
+                                .st7 {
+                                    fill: #2f4555
+                                }
+
+                                .st12 {
+                                    fill: #f1cc4b
+                                }
+                            </style>
+                            <circle transform="rotate(-.146 40.174 40.16)" cx="40.2" cy="40.2" style="fill:#55ab99" r="40.2" />
+                            <path class="st4" d="M20.4 32.5c0 1.4-1.1 2.6-2.5 2.6h-1.7c-1.4 0-2.6-1.1-2.6-2.5v-7.4c0-1.4 1.1-2.6 2.5-2.6h1.7c1.4 0 2.6 1.1 2.6 2.5v7.4z" />
+                            <path class="st4" d="M17.5 26.4h-.9v-7.5l4.2-2.5.5.7-3.9 2.3zM59.9 32.4c0 1.4 1.2 2.6 2.6 2.5h1.7c1.4 0 2.6-1.1 2.5-2.6v-7.4c0-1.4-1.2-2.6-2.6-2.5h-1.7c-1.4 0-2.6 1.1-2.5 2.6v7.4z" />
+                            <path class="st4" d="M62.8 26.2h.8v-7.4l-4.2-2.5-.5.7 3.9 2.3z" />
+                            <path transform="rotate(-.15 24.82 65.362)" class="st4" d="M22 62.2h5.6v6.4H22z" />
+                            <path transform="matrix(1 -.00262 .00262 1 -.17 .146)" class="st4" d="M52.9 62.1h5.6v6.4h-5.6z" />
+                            <path class="st7" d="M61.1 60.4 61 17.6c0-1.4-1.2-2.6-2.6-2.5l-36.6.1c-1.4 0-2.6 1.2-2.5 2.6l.1 42.8 41.7-.2z" />
+                            <path style="fill:#81caff" d="M22.2 24H59v16.5H22.2z" />
+                            <g>
+                                <path transform="rotate(-.144 24.877 53.03)" class="st12" d="M20.4 50.7h8.9v4.7h-8.9z" />
+                                <path transform="matrix(1 -.00252 .00252 1 -.133 .14)" class="st12" d="M51.1 50.6H60v4.7h-8.9z" />
+                            </g>
+                            <path class="st7" d="m41.2 42.5-2.1.1.8-20.6h.4z" />
+                            <path transform="matrix(1 -.00254 .00254 1 -.155 .102)" style="fill:#babfc5" d="M17.1 59.6h46.2v2.8H17.1z" />
+                        </svg>
+                        <div>
+                            <p class="font-bold text-xl">CXZ</p>
+                            <p class="text-sm font-light">Cox's Bazar</p>
+                        </div>
+                    </div>
+
+                    <div class="btn w-[420px] h-20 gap-[80px]">
+                        <div>
+                            <p class="font-bold text-xl">CXZ</p>
+                            <p class="text-sm font-light">Cox's Bazar</p>
+                        </div>
+                        <svg class="w-8 h-8" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 80.3 80.3" style="enable-background:new 0 0 80.3 80.3" xml:space="preserve">
+                            <style>
+                                .st4 {
+                                    fill: #0c2c48
+                                }
+
+                                .st7 {
+                                    fill: #2f4555
+                                }
+
+                                .st12 {
+                                    fill: #f1cc4b
+                                }
+                            </style>
+                            <circle transform="rotate(-.146 40.174 40.16)" cx="40.2" cy="40.2" style="fill:#55ab99" r="40.2" />
+                            <path class="st4" d="M20.4 32.5c0 1.4-1.1 2.6-2.5 2.6h-1.7c-1.4 0-2.6-1.1-2.6-2.5v-7.4c0-1.4 1.1-2.6 2.5-2.6h1.7c1.4 0 2.6 1.1 2.6 2.5v7.4z" />
+                            <path class="st4" d="M17.5 26.4h-.9v-7.5l4.2-2.5.5.7-3.9 2.3zM59.9 32.4c0 1.4 1.2 2.6 2.6 2.5h1.7c1.4 0 2.6-1.1 2.5-2.6v-7.4c0-1.4-1.2-2.6-2.6-2.5h-1.7c-1.4 0-2.6 1.1-2.5 2.6v7.4z" />
+                            <path class="st4" d="M62.8 26.2h.8v-7.4l-4.2-2.5-.5.7 3.9 2.3z" />
+                            <path transform="rotate(-.15 24.82 65.362)" class="st4" d="M22 62.2h5.6v6.4H22z" />
+                            <path transform="matrix(1 -.00262 .00262 1 -.17 .146)" class="st4" d="M52.9 62.1h5.6v6.4h-5.6z" />
+                            <path class="st7" d="M61.1 60.4 61 17.6c0-1.4-1.2-2.6-2.6-2.5l-36.6.1c-1.4 0-2.6 1.2-2.5 2.6l.1 42.8 41.7-.2z" />
+                            <path style="fill:#81caff" d="M22.2 24H59v16.5H22.2z" />
+                            <g>
+                                <path transform="rotate(-.144 24.877 53.03)" class="st12" d="M20.4 50.7h8.9v4.7h-8.9z" />
+                                <path transform="matrix(1 -.00252 .00252 1 -.133 .14)" class="st12" d="M51.1 50.6H60v4.7h-8.9z" />
+                            </g>
+                            <path class="st7" d="m41.2 42.5-2.1.1.8-20.6h.4z" />
+                            <path transform="matrix(1 -.00254 .00254 1 -.155 .102)" style="fill:#babfc5" d="M17.1 59.6h46.2v2.8H17.1z" />
+                        </svg>
+                        <div>
+                            <p class="font-bold text-xl">DHK</p>
+                            <p class="text-sm font-light">Dhaka</p>
+                        </div>
+                    </div>
+
+                    <div class="btn w-[420px] h-20 gap-[80px]">
+                        <div>
+                            <p class="font-bold text-xl">DHK</p>
+                            <p class="text-sm font-light">Dhaka</p>
+                        </div>
+                        <svg class="w-8 h-8" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 80.3 80.3" style="enable-background:new 0 0 80.3 80.3" xml:space="preserve">
+                            <style>
+                                .st4 {
+                                    fill: #0c2c48
+                                }
+
+                                .st7 {
+                                    fill: #2f4555
+                                }
+
+                                .st12 {
+                                    fill: #f1cc4b
+                                }
+                            </style>
+                            <circle transform="rotate(-.146 40.174 40.16)" cx="40.2" cy="40.2" style="fill:#55ab99" r="40.2" />
+                            <path class="st4" d="M20.4 32.5c0 1.4-1.1 2.6-2.5 2.6h-1.7c-1.4 0-2.6-1.1-2.6-2.5v-7.4c0-1.4 1.1-2.6 2.5-2.6h1.7c1.4 0 2.6 1.1 2.6 2.5v7.4z" />
+                            <path class="st4" d="M17.5 26.4h-.9v-7.5l4.2-2.5.5.7-3.9 2.3zM59.9 32.4c0 1.4 1.2 2.6 2.6 2.5h1.7c1.4 0 2.6-1.1 2.5-2.6v-7.4c0-1.4-1.2-2.6-2.6-2.5h-1.7c-1.4 0-2.6 1.1-2.5 2.6v7.4z" />
+                            <path class="st4" d="M62.8 26.2h.8v-7.4l-4.2-2.5-.5.7 3.9 2.3z" />
+                            <path transform="rotate(-.15 24.82 65.362)" class="st4" d="M22 62.2h5.6v6.4H22z" />
+                            <path transform="matrix(1 -.00262 .00262 1 -.17 .146)" class="st4" d="M52.9 62.1h5.6v6.4h-5.6z" />
+                            <path class="st7" d="M61.1 60.4 61 17.6c0-1.4-1.2-2.6-2.6-2.5l-36.6.1c-1.4 0-2.6 1.2-2.5 2.6l.1 42.8 41.7-.2z" />
+                            <path style="fill:#81caff" d="M22.2 24H59v16.5H22.2z" />
+                            <g>
+                                <path transform="rotate(-.144 24.877 53.03)" class="st12" d="M20.4 50.7h8.9v4.7h-8.9z" />
+                                <path transform="matrix(1 -.00252 .00252 1 -.133 .14)" class="st12" d="M51.1 50.6H60v4.7h-8.9z" />
+                            </g>
+                            <path class="st7" d="m41.2 42.5-2.1.1.8-20.6h.4z" />
+                            <path transform="matrix(1 -.00254 .00254 1 -.155 .102)" style="fill:#babfc5" d="M17.1 59.6h46.2v2.8H17.1z" />
+                        </svg>
+                        <div>
+                            <p class="font-bold text-xl">BAR</p>
+                            <p class="text-sm font-light">Barishal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion (C) -->
+                <?php /* include 'accordion.php';  */?>
+
+                <img class="my-12" src="https://i.ibb.co.com/n1YxCSp/SSLCommerz-Pay-With-logo-All-Size-01.png" alt="">
+            </div>
         </section>
 
     </main>
