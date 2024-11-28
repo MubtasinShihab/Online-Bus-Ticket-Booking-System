@@ -197,6 +197,25 @@
             </div>
 
         </section>
+
+        <!-- Intro -->
+        <section class="bg-white rounded-t-[88px] w-full border-t-2 border-[#1dd100]">
+            <div class="text-center">
+
+                <!-- Title and description (upper half) -->
+                <div class="pt-28">
+                    <p class="font-raleway text-4xl font-bold">
+                        P Paribahan
+                    </p>
+                    <p class="w-[700px] mx-auto text-[#03071299] text-xl mt-6 pb-16">
+                        Your One-Stop Ticket Shop! Explore destinations, book hassle-free bus rides, and embark on
+                        adventure with ease.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        
     </main>
 
     <?php include 'footer.php'; ?>
