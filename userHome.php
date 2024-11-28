@@ -74,6 +74,131 @@
 
     </header>
 
+    <main>
+        <!-- Extras -->
+        <section class="text-center"><!-- Coupon Section -->
+
+            <!-- Title -->
+            <div class="text-5xl mt-64 pb-20 font-bold font-raleway">
+                Best offers for you
+            </div>
+
+            <!-- Coupons -->
+            <div class="flex gap-6 justify-center">
+
+                <!-- Independence coupon -->
+                <div class="bg-[#006a4eff] w-[573px] h-[220px] rounded-3xl flex gap-11">
+                    <div class="pt-8 pl-[50px]">
+                        <p class="font-inter w-56 h-32 leading-9">
+                            <span class="text-4xl font-black text-[#f42a41ff]">
+                                Independence Offer
+                            </span>
+                            <br>
+                            <span class="text-[20px] text-[#f42a41ff] font-semibold">
+                                50% off on purchase
+                            </span>
+                            <br>
+                            <span class="text-[18px] text-[#f42a41ff] font-medium">
+                                use by August 2024
+                            </span>
+                        </p>
+                    </div>
+
+                    <img src="https://i.ibb.co.com/pWVQZ4D/cupon-devider.png" alt="">
+
+                    <div class="relative right-6">
+                        <p class="font-raleway items-center mt-[80px]">
+                            <span class="text-[32px] font-bold text-[#f42a41ff]">
+                                NewBD24
+                            </span> <br>
+                            <span class="text-[20px] font-medium text-[#f42a41ff]">
+                                Coupon Code
+                            </span>
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- 15% off coupon -->
+                <div class="bg-[#FFBF0F] w-[573px] h-[220px] rounded-3xl flex gap-11">
+                    <div class="pt-14 pl-[50px]">
+                        <p class="font-inter w-56 h-32 leading-9">
+                            <span class="text-4xl font-black">
+                                15% OFF
+                            </span>
+                            <br>
+                            <span class="text-[20px] font-semibold">
+                                on your next purchase
+                            </span>
+                            <br>
+                            <span class="text-[18px] font-medium text-[#03071266]">
+                                use by January 2024
+                            </span>
+                        </p>
+                    </div>
+
+                    <img src="https://i.ibb.co.com/pWVQZ4D/cupon-devider.png" alt="">
+
+                    <div class="relative right-6">
+                        <p class="font-raleway items-center mt-[80px]">
+                            <span class="text-[32px] font-bold">
+                                NEW15
+                            </span> <br>
+                            <span class="text-[20px] font-medium text-[#03071266]">
+                                Coupon Code
+                            </span>
+                        </p>
+                    </div>
+
+
+                </div>
+
+                <!-- 20% off coupon -->
+                <div class="bg-[#F78C9C] w-[573px] h-[220px] rounded-3xl flex gap-11">
+                    <div class="pt-14 pl-[50px]">
+                        <p class="font-inter w-56 h-32 leading-9">
+                            <span class="text-3xl font-black">
+                                Be a member
+                            </span>
+                            <br>
+                            <span class="text-[20px] font-semibold">
+                                on your next purchase
+                            </span>
+                            <br>
+                            <span class="text-[18px] font-medium text-[#03071266]">
+                                use by January 2024
+                            </span>
+                        </p>
+                    </div>
+
+                    <img src="https://i.ibb.co.com/pWVQZ4D/cupon-devider.png" alt="">
+
+                    <div class="relative right-6">
+                        <p class="font-raleway items-center mt-[80px]">
+                            <span class="text-[32px] font-bold">
+                                Couple 20
+                            </span> <br>
+                            <span class="text-[20px] font-medium text-[#03071266]">
+                                Coupon Code
+                            </span>
+                        </p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <!-- Button (See All Offers) -->
+            <div class="pt-16">
+                <button class="btn btn-outline btn-success text-[#1DD100] border-[#1DD100] font-bold text-xl w-48 h-16 mb-28">
+                    See All Offers
+                </button>
+            </div>
+
+        </section>
+    </main>
+
     <?php include 'footer.php'; ?>
 </body>
 
