@@ -215,7 +215,12 @@
 
             </div>
         </section>
-        
+
+        <!-- Search Panel -->
+        <section id="ticketPanel" class="bg-white pb-16">
+            <?php include 'searchPanel.php'; ?>
+        </section>
+
     </main>
 
     <?php include 'footer.php'; ?>

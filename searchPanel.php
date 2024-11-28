@@ -28,9 +28,11 @@
 
 <body>
 
-    <div class="bg-slate-200/50 w-4/6 mx-auto rounded-xl">
+    <div class="bg-slate-200/50 w-3/4 mx-auto rounded-xl">
+
         <p class="font-raleway font-medium p-8 text-3xl">Book your ticket from the country's best bus operator</p>
-        <div class="flex gap-6 mb-5 ml-24">
+
+        <div class="flex gap-4 mb-5 ml-20">
             <!-- From -->
             <div class="relative max-w-lg">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-1.5 pointer-events-none">
@@ -75,7 +77,7 @@
             </div>
 
             <!-- Date Select -->
-            <div class="relative max-w-lg">
+            <div class="relative max-w-lg mx-2">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
                     <svg class="w-4 h-4 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
@@ -83,8 +85,28 @@
                 </div>
                 <input datepicker id="default-datepicker" type="text" class="w-80 h-14 bg-gray-50 border border-gray-300 placeholder-gray-400 shadow-md shadow-gray-500 text-gray-900 text-sm rounded-[4px] focus:ring-blue-500 focus:border-blue-500 block ps-10 p-2.5" placeholder="Select date">
             </div>
+
+            <div>
+                <ul class="items-center w-48 h-14 text-sm font-medium text-gray-900 bg-gray-50 border border-gray-300 placeholder-gray-400 shadow-md shadow-gray-500 rounded-sm sm:flex">
+                    <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
+                        <div class="flex items-center ps-3">
+                            <input id="horizontal-list-radio-license" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+                            <label for="horizontal-list-radio-license" class="w-full py-3 ms-2 text-sm font-medium text-gray-900">Non AC</label>
+                        </div>
+                    </li>
+                    <li class="w-full">
+                        <div class="flex items-center ps-3">
+                            <input id="horizontal-list-radio-passport" type="radio" value="" name="list-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2">
+                            <label for="horizontal-list-radio-passport" class="w-full py-3 ms-2 text-sm font-medium text-gray-900">AC</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
         </div>
-        <button type="button" class="ml-24 w-5/6 h-12 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 shadow-md shadow-green-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-5">Search</button>
+
+        <button type="button" class="ml-[5.5%] w-[88%] h-12 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 shadow-md shadow-green-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-5">Search</button>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
