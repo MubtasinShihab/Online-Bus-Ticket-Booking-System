@@ -3,13 +3,14 @@
 include('connection.php');
 
 // Fetch data from the 'user' table
-$query = "SELECT * FROM user";
+$query = "SELECT * FROM bus";
 $result = $conn->query($query);
 
 if (!$result) {
     die("Query Failed: " . $conn->error);
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
@@ -50,20 +51,20 @@ if (!$result) {
                 <div class="flex items-center justify-center p-6">
                     <div class="w-full max-w-7xl mt-6 border bg-white shadow-lg rounded-lg">
                         <div class="p-4 border-b border-gray-200">
-                            <h2 class="text-2xl font-bold text-gray-800">User Information</h2>
+                            <h2 class="text-2xl font-bold text-gray-800">All Bus Information</h2>
                         </div>
                         <div class="overflow-x-auto">
                             <table class="min-w-full divide-y divide-gray-200 text-sm">
                                 <thead class="bg-gray-50">
                                     <tr>
-                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
-                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">First Name</th>
-                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Name</th>
-                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Username</th>
-                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone</th>
-                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date of Signup</th>
-                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Login</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bus Code</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Boarding Location</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Departure Location</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Seat Capacity</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Coach Type</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bus Type</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Route</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Max Price</th>
                                         <th class="px-4 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
                                     </tr>
                                 </thead>
@@ -72,17 +73,17 @@ if (!$result) {
                                     // Dynamically generate table rows
                                     while ($row = $result->fetch_assoc()) {
                                         echo "<tr>";
-                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['id']}</td>";
-                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['email']}</td>";
-                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['first_name']}</td>";
-                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['last_name']}</td>";
-                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['user_name']}</td>";
-                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['phone']}</td>";
-                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['date_of_signup']}</td>";
-                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['last_login']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['bus_code']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['source_location']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['end_location']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['capacity']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['coach_type']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['bus_type']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['via_road']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['max_price']}</td>";
                                         echo "<td class='px-4 py-2 text-center'>
-                                                <a href='adminEditUser.php?id={$row['id']}' class='px-3 py-1 bg-blue-500 text-white rounded-lg text-xs hover:bg-blue-600'>Edit</a>
-                                                <a href='adminDeleteUser.php?id={$row['id']}' onclick='return confirm(\"Are you sure you want to delete this user?\")' class='px-3 py-1 bg-red-500 text-white rounded-lg text-xs hover:bg-red-600'>Delete</a>
+                                                <a href='.php?id={$row['bus_code']}' class='px-3 py-1 bg-blue-500 text-white rounded-lg text-xs hover:bg-blue-600'>Edit</a>
+                                                <a href='.php?id={$row['bus_code']}' onclick='return confirm(\"Are you sure you want to delete this Bus Info?\")' class='px-3 py-1 bg-red-500 text-white rounded-lg text-xs hover:bg-red-600'>Delete</a>
                                             </td>";
                                     }
                                     ?>
@@ -107,7 +108,7 @@ if (!$result) {
                     <div class="flex flex-col gap-5">
                         <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href="adminAllBusInfo.php">All Bus Info</a></btn>
                         <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href="adminAddBusStop.php">Add Bus Stop</a></btn>
-                        <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href=".php">All User Info</a></btn>
+                        <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href="adminCheckUserInfo.php">All User Info</a></btn>
                         <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href=".php">Check Bus Location</a></btn>
                     </div>
                 </div>

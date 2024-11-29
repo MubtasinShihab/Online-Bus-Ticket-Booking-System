@@ -88,7 +88,7 @@
                         </label>
                     </div>
 
-                    <div class="form-control mt-6">
+                    <div class="form-control mt-3">
                         <button class="btn bg-[#1dd100] text-white text-xl rounded-md font-bold shadow-md shadow-[#1dd10099]">Login</button>
                     </div>
 

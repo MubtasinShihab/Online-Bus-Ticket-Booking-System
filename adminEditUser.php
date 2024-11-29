@@ -141,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a
                                 href="adminAddBusStop.php">Add Bus Stop</a></btn>
                         <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a
-                                href="adminCheckUserInfo.php">See User Info</a></btn>
+                                href="adminCheckUserInfo.php">All User Info</a></btn>
                         <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href=".php">Check Bus
                                 Location</a></btn>
                     </div>
