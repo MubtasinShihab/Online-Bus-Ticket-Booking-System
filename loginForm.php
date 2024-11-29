@@ -44,22 +44,22 @@
                 <!-- method="post" action="loginHandler.php" -->
                 <form method="post" action="loginHandler.php" class="card-body">
                     <div class="form-control">
-                        <label class="label">
+                        <label class="label" for="email">
                             <span class="label-text">Email</span>
                         </label>
-                        <input type="email" placeholder="email" class="input input-bordered border-x-0 border-2" required />
+                        <input type="email" id="email" name="email" placeholder="email" class="input input-bordered border-x-0 border-2" required />
                     </div>
                     <div class="form-control">
-                        <label class="label">
+                        <label class="label" for="password">
                             <span class="label-text">Password</span>
                         </label>
-                        <input type="password" placeholder="password" class="input input-bordered border-x-0 border-2" required />
+                        <input type="password" id="password" name="password" placeholder="password" class="input input-bordered border-x-0 border-2" required />
                         <label class="label">
                             <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
                     <div class="form-control mt-6">
-                        <button class="btn bg-[#1dd100] text-white text-xl rounded-md font-bold shadow-md shadow-[#1dd10099]">Login</button>
+                        <button type="submit" class="btn bg-[#1dd100] text-white text-xl rounded-md font-bold shadow-md shadow-[#1dd10099]">Login</button>
                     </div>
                 </form>
                 
