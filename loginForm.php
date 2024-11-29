@@ -30,8 +30,8 @@
     <?php include 'navbar.php'; ?>
 
     <div class="hero bg-base-200 min-h-screen">
-        <div class="hero-content flex-col lg:flex-row-reverse gap-14">
-            <div class="text-center lg:text-left my-16">
+        <div class="hero-content flex-col lg:flex-row">
+            <div class="text-center lg:text-left">
                 <h1 class="text-5xl font-bold">Login now!</h1>
                 <p class="py-8 w-3/4">
                     Your One-Stop Ticket Shop! Explore destinations, book hassle-free bus rides, and embark on
@@ -39,7 +39,7 @@
                 </p>
             </div>
 
-            <div class="card bg-base-100  border-2 border-t-[#1dd10099] rounded-lg w-full max-w-sm shrink-0 shadow-lg shadow-[#1dd10099]">
+            <div class="card bg-base-100 border-2 border-t-[#1dd10099] rounded-lg w-full max-w-sm shrink-0 shadow-lg shadow-[#1dd10099]">
 
                 <!-- method="post" action="loginHandler.php" -->
                 <form method="post" action="loginHandler.php" class="card-body">

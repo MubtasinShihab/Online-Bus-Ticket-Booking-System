@@ -38,22 +38,46 @@
                 </p>
             </div>
 
-            <div class="card bg-base-100  border-2 border-t-[#1dd10099] rounded-lg w-full max-w-sm shrink-0 shadow-lg shadow-[#1dd10099]">
+            <div class="card bg-base-100 border-2 border-t-[#1dd10099] rounded-lg w-full max-w-sm shrink-0 shadow-lg shadow-[#1dd10099]">
 
                 <!-- method="post" action="loginHandler.php" -->
-                <form method="POST" action="signUpHandler.php" class="card-body">
-                    <div class="form-control">
-                        <label class="label">
-                            <span class="label-text">Name</span>
-                        </label>
-                        <input type="text" placeholder="Your Name" class="input input-bordered border-x-0 border-2" required />
-                    </div>
+                <form method="POST" action="signUpHandler.php" class="card-body gap-4">
+
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">Email</span>
                         </label>
-                        <input type="email" placeholder="Your Email" class="input input-bordered border-x-0 border-2" required />
+                        <input type="email" id="email" name="email" placeholder="email" class="input input-bordered border-x-0 border-2" required />
                     </div>
+
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">First Name</span>
+                        </label>
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" class="input input-bordered border-x-0 border-2" required />
+                    </div>
+
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Last Name</span>
+                        </label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" class="input input-bordered border-x-0 border-2" required />
+                    </div>
+
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">User Name</span>
+                        </label>
+                        <input type="text" id="userName" name="userName" placeholder="User Name" class="input input-bordered border-x-0 border-2" required />
+                    </div>
+
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Phone</span>
+                        </label>
+                        <input type="number" id="phoneNo" name="phoneNo" placeholder="Your Phone No." class="input input-bordered border-x-0 border-2" required />
+                    </div>
+
                     <div class="form-control">
                         <label class="label">
                             <span class="label-text">Password</span>
@@ -63,11 +87,13 @@
                             <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                     </div>
+
                     <div class="form-control mt-6">
                         <button class="btn bg-[#1dd100] text-white text-xl rounded-md font-bold shadow-md shadow-[#1dd10099]">Login</button>
                     </div>
+
                 </form>
-                
+
             </div>
         </div>
     </div>
