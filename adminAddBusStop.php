@@ -36,16 +36,11 @@
 
                 <!-- Page content here -->
                 <div class="min-h-screen flex items-center justify-center bg-gray-100">
-                    <form class="w-full max-w-[50%] bg-white shadow-lg rounded-lg p-8 space-y-6" id="addBusStopForm">
+                    <form class="w-full max-w-[50%] bg-white shadow-lg rounded-lg p-8 space-y-6" id="addBusStopForm" method="POST" action="adminAddBusStopHandle.php">
                         <h2 class="text-2xl font-bold text-center text-gray-800">Add a New Bus Stop</h2>
 
                         <div class="grid grid-cols-2 gap-6">
-                            <!-- ID -->
-                            <div class="form-control">
-                                <label for="id" class="label text-gray-600 font-medium">ID</label>
-                                <input type="number" id="id" name="id" placeholder="Enter stop ID" class="input input-bordered border-gray-300 w-full rounded-lg" required>
-                            </div>
-
+                            
                             <!-- Bus Code -->
                             <div class="form-control">
                                 <label for="busCode" class="label text-gray-600 font-medium">Bus Code</label>
@@ -67,18 +62,13 @@
                             <!-- Time 2 -->
                             <div class="form-control">
                                 <label for="time2" class="label text-gray-600 font-medium">Time 2</label>
-                                <input type="time" id="time2" name="time_2" class="input input-bordered border-gray-300 w-full rounded-lg">
+                                <input type="time" id="time2" name="time_2" class="input input-bordered border-gray-300 w-full rounded-lg" required>
                             </div>
 
                             <!-- Location Level -->
                             <div class="form-control">
                                 <label for="locationLevel" class="label text-gray-600 font-medium">Location Level</label>
-                                <select id="locationLevel" name="location_level" class="select select-bordered border-gray-300 w-full rounded-lg" required>
-                                    <option disabled selected>Select location level</option>
-                                    <option value="City">City</option>
-                                    <option value="Town">Town</option>
-                                    <option value="Village">Village</option>
-                                </select>
+                                <input type="number" id="locationLevel" name="location_level" class="input input-bordered border-gray-300 w-full rounded-lg" required>
                             </div>
 
                             <!-- Point Location -->

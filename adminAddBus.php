@@ -29,8 +29,11 @@
     <div class="">
         <div class="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+            
             <div class="drawer-content flex flex-col">
+
                 <?php include 'navbar.php'; ?>
+
                 <!-- Page content here -->
                 <div class="min-h-screen flex items-center justify-center bg-gray-100">
                     <form class="w-full max-w-[50%] bg-white shadow-lg rounded-lg p-8 space-y-6" id="addBusForm" method="POST" action="adminAddBusHandle.php">

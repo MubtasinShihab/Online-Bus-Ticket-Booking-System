@@ -6,7 +6,14 @@ include('connection.php');
 $query = "SELECT * FROM bus";
 $result = $conn->query($query);
 
+$query2 = "SELECT * FROM bus_stop";
+$result2 = $conn->query($query2);
+
 if (!$result) {
+    die("Query Failed: " . $conn->error);
+}
+
+if (!$result2) {
     die("Query Failed: " . $conn->error);
 }
 ?>
@@ -96,7 +103,48 @@ if (!$result) {
                     </div>
                 </div>
 
-                <div class="flex items-center justify-center mt-3 gap-6">
+                <div class="flex items-center justify-center p-6">
+                    <div class="w-full max-w-7xl mt-6 border bg-white shadow-lg rounded-lg">
+                        <div class="p-4 border-b border-gray-200">
+                            <h2 class="text-2xl font-bold text-gray-800">All Bus Stops</h2>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200 text-sm">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bus Code</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Time 1</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Time 2</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location Level</th>
+                                        <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Point Location</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <?php
+                                    // Dynamically generate table rows
+                                    while ($row = $result2->fetch_assoc()) {
+                                        echo "<tr>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['id']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['bus_code']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['location']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['time_1']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['time_2']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['location_level']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['point_location']}</td>";
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="p-4 border-t border-gray-200">
+                            <p class="text-sm text-gray-600">Total: <span class="font-bold"><?php echo $result2->num_rows; ?></span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center mt-3 mb-12 gap-6">
                     <button class="btn w-[30%] btn-outline btn-success shadow-xl"><a href="adminAddBus.php">Add Bus</a></button>
                     <button class="btn w-[30%] btn-outline btn-success shadow-xl"><a href="adminAddBusStop.php">Add Bus Stop</a></button>
                 </div>
