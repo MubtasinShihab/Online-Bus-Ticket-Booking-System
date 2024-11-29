@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <h2 class="text-xl font-bold text-gray-800">Edit User Details</h2>
                             <p class="text-sm text-gray-600">Update the details below and save changes.</p>
                         </div>
-                        
+
                         <form method="POST" class="p-6 space-y-4">
                             <!-- Email -->
                             <div>
@@ -135,16 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </p>
                     <p class="text-center">P Paribahan</p>
                     <hr class="my-4">
-                    <div class="flex flex-col gap-5">
-                        <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href="adminAddBus.php">Add
-                                Bus</a></btn>
-                        <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a
-                                href="adminAddBusStop.php">Add Bus Stop</a></btn>
-                        <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a
-                                href="adminCheckUserInfo.php">All User Info</a></btn>
-                        <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href=".php">Check Bus
-                                Location</a></btn>
-                    </div>
+                    <?php include 'adminSideBarOptions.php'; ?>
                 </div>
             </div>
         </div>

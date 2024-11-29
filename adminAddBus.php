@@ -33,7 +33,7 @@
                 <?php include 'navbar.php'; ?>
                 <!-- Page content here -->
                 <div class="min-h-screen flex items-center justify-center bg-gray-100">
-                    <form class="w-full max-w-[50%] bg-white shadow-lg rounded-lg p-8 space-y-6" id="addBusForm">
+                    <form class="w-full max-w-[50%] bg-white shadow-lg rounded-lg p-8 space-y-6" id="addBusForm" method="POST" action="adminAddBusHandle.php">
                         <h2 class="text-2xl font-bold text-center text-gray-800">Add a New Bus</h2>
 
                         <div class="grid grid-cols-2 gap-6">
@@ -46,19 +46,19 @@
                             <!-- Boarding Location -->
                             <div class="form-control">
                                 <label for="boardingLocation" class="label text-gray-600 font-medium">Boarding Location</label>
-                                <input type="text" id="boardingLocation" name="boarding_location" placeholder="Enter boarding location" class="input input-bordered border-gray-300 w-full rounded-lg" required>
+                                <input type="text" id="boardingLocation" name="source_location" placeholder="Enter boarding location" class="input input-bordered border-gray-300 w-full rounded-lg" required>
                             </div>
 
                             <!-- Departure Location -->
                             <div class="form-control">
                                 <label for="departureLocation" class="label text-gray-600 font-medium">Departure Location</label>
-                                <input type="text" id="departureLocation" name="departure_location" placeholder="Enter departure location" class="input input-bordered border-gray-300 w-full rounded-lg" required>
+                                <input type="text" id="departureLocation" name="end_location" placeholder="Enter departure location" class="input input-bordered border-gray-300 w-full rounded-lg" required>
                             </div>
 
                             <!-- Seat Capacity -->
                             <div class="form-control">
                                 <label for="seatCapacity" class="label text-gray-600 font-medium">Seat Capacity</label>
-                                <input type="number" id="seatCapacity" name="seat_capacity" placeholder="Enter seat capacity" class="input input-bordered border-gray-300 w-full rounded-lg" required>
+                                <input type="number" id="seatCapacity" name="capacity" placeholder="Enter seat capacity" class="input input-bordered border-gray-300 w-full rounded-lg" required>
                             </div>
 
                             <!-- Coach Type -->
@@ -103,6 +103,7 @@
                     </form>
                 </div>
 
+
             </div>
 
             <div class="drawer-side">
@@ -112,12 +113,7 @@
                     <p class="text-4xl btn btn-ghost font-extrabold text-center"><a href="adminPanel.php">Master Admin</a></p>
                     <p class="text-center">P Paribahan</p>
                     <hr class="my-4">
-                    <div class="flex flex-col gap-5">
-                        <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href="adminAllBusInfo.php">All Bus Info</a></btn>
-                        
-                        <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href="adminCheckUserInfo.php">All User Info</a></btn>
-                        <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href=".php">Check Bus Location</a></btn>
-                    </div>
+                    <?php include 'adminSideBarOptions.php'; ?>
                 </div>
             </div>
         </div>
