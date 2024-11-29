@@ -83,7 +83,7 @@ if (!$result) {
                                         echo "<td class='px-4 py-2 text-gray-700'>{$row['max_price']}</td>";
                                         echo "<td class='px-4 py-2 text-center'>
                                                 <a href='.php?id={$row['bus_code']}' class='px-3 py-1 bg-blue-500 text-white rounded-lg text-xs hover:bg-blue-600'>Edit</a>
-                                                <a href='.php?id={$row['bus_code']}' onclick='return confirm(\"Are you sure you want to delete this Bus Info?\")' class='px-3 py-1 bg-red-500 text-white rounded-lg text-xs hover:bg-red-600'>Delete</a>
+                                                <a href='adminDeleteBus.php?id={$row['bus_code']}' onclick='return confirm(\"Are you sure you want to delete this Bus Info?\")' class='px-3 py-1 bg-red-500 text-white rounded-lg text-xs hover:bg-red-600'>Delete</a>
                                             </td>";
                                     }
                                     ?>
