@@ -1,3 +1,16 @@
+<?php
+// Include the connection file
+include('connection.php');
+
+// Fetch data from the 'user' table
+$query = "SELECT * FROM user";
+$result = $conn->query($query);
+
+if (!$result) {
+    die("Query Failed: " . $conn->error);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 
@@ -55,31 +68,32 @@
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
-                                    <!-- Example rows -->
-                                    <tr>
-                                        <td class="px-4 py-2 text-gray-700">1</td>
-                                        <td class="px-4 py-2 text-gray-700">john.doe@example.com</td>
-                                        <td class="px-4 py-2 text-gray-700">John</td>
-                                        <td class="px-4 py-2 text-gray-700">Doe</td>
-                                        <td class="px-4 py-2 text-gray-700">johndoe</td>
-                                        <td class="px-4 py-2 text-gray-700">1234567890</td>
-                                        <td class="px-4 py-2 text-gray-700">2024-01-15</td>
-                                        <td class="px-4 py-2 text-gray-700">2024-11-26 00:31:44</td>
-                                        <td class="px-4 py-2 text-center">
-                                            <button class="px-3 py-1 bg-blue-500 text-white rounded-lg text-xs hover:bg-blue-600">Edit</button>
-                                            <button class="px-3 py-1 bg-red-500 text-white rounded-lg text-xs hover:bg-red-600">Delete</button>
-                                        </td>
-                                    </tr>
-                                    <!-- Repeat for additional rows -->
+                                    <?php
+                                    // Dynamically generate table rows
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo "<tr>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['id']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['email']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['first_name']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['last_name']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['user_name']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['phone']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['date_of_signup']}</td>";
+                                        echo "<td class='px-4 py-2 text-gray-700'>{$row['last_login']}</td>";
+                                        echo "<td class='px-4 py-2 text-center'>
+                                                <a href='adminEditUser.php?id={$row['id']}' class='px-3 py-1 bg-blue-500 text-white rounded-lg text-xs hover:bg-blue-600'>Edit</a>
+                                                <a href='adminDeleteUser.php?id={$row['id']}' onclick='return confirm(\"Are you sure you want to delete this user?\")' class='px-3 py-1 bg-red-500 text-white rounded-lg text-xs hover:bg-red-600'>Delete</a>
+                                            </td>";
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
                         <div class="p-4 border-t border-gray-200">
-                            <p class="text-sm text-gray-600">Total Users: <span class="font-bold">7</span></p>
+                            <p class="text-sm text-gray-600">Total Users: <span class="font-bold"><?php echo $result->num_rows; ?></span></p>
                         </div>
                     </div>
                 </div>
-
 
             </div>
 
