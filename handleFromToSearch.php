@@ -163,7 +163,7 @@ if ($result->num_rows > 0 && $bus_available) {
                         </div>
                         <div>
                             <a
-                                href="#"><!--this will be the link to goto next page seat map-->
+                                href="ticketPanel.php?bus_code=<?= $bus_code ?>&& capacity=<?= $capacity ?> && date=<?= $date ?> && price=<?= $total_price ?>&& fVisitPage=<?php echo 'NULL' ?>">
                                 <button
                                     class="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600 flex items-center space-x-2">
                                     <span>View Seats</span>
