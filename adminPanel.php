@@ -34,7 +34,7 @@
                 <?php include 'navbar.php'; ?>
                 <!-- Page content here -->
 
-                <div class="flex flex-wrap gap-6 w-full justify-center p-6">
+                <div class="flex flex-wrap mt-12 gap-6 w-full justify-center p-6">
                     <!-- Users Card -->
                     <div class="card w-72 bg-indigo-600 text-white shadow-md p-4 rounded-lg">
                         <div class="text-2xl font-bold">26K</div>
@@ -85,12 +85,12 @@
                 </div>
 
             </div>
-            
+
             <div class="drawer-side">
                 <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"></label>
                 <div class="menu bg-gray-800 text-white min-h-full w-80">
                     <!-- Sidebar content here -->
-                    <p class="text-4xl font-extrabold text-center">Master Admin</p>
+                    <p class="text-4xl btn btn-ghost font-extrabold text-center"><a href="adminPanel.php">Master Admin</a></p>
                     <p class="text-center">P Paribahan</p>
                     <hr class="my-4">
                     <div class="flex flex-col gap-5">
