@@ -91,9 +91,14 @@ if (!$result) {
                             </table>
                         </div>
                         <div class="p-4 border-t border-gray-200">
-                            <p class="text-sm text-gray-600">Total Users: <span class="font-bold"><?php echo $result->num_rows; ?></span></p>
+                            <p class="text-sm text-gray-600">Total Bus: <span class="font-bold"><?php echo $result->num_rows; ?></span></p>
                         </div>
                     </div>
+                </div>
+
+                <div class="flex items-center justify-center mt-3 gap-6">
+                    <button class="btn w-[30%] btn-outline btn-success shadow-xl"><a href="adminAddBus.php">Add Bus</a></button>
+                    <button class="btn w-[30%] btn-outline btn-success shadow-xl"><a href="adminAddBusStop.php">Add Bus Stop</a></button>
                 </div>
 
             </div>
@@ -107,7 +112,7 @@ if (!$result) {
                     <hr class="my-4">
                     <div class="flex flex-col gap-5">
                         <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href="adminAllBusInfo.php">All Bus Info</a></btn>
-                        <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href="adminAddBusStop.php">Add Bus Stop</a></btn>
+
                         <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href="adminCheckUserInfo.php">All User Info</a></btn>
                         <btn class="btn bg-slate-700 border-none h-14 text-xl text-gray-200"><a href=".php">Check Bus Location</a></btn>
                     </div>
