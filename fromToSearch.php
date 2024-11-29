@@ -9,7 +9,7 @@ include 'header.php';
     <div class="container mx-auto flex items-center justify-between"> <a href="#"
             class="text-xl font-bold">BusFinder</a>
 
-        <form method="POST" action="" class="flex space-x-4 items-center"> <!-- From Location -->
+        <form method="POST" action="handleFromToSearch.php" class="flex space-x-4 items-center"> <!-- From Location -->
             <div> <label for="from" class="sr-only">From</label> 
             <input list="keywords" type="text" name="from" id="from"
                     placeholder="From" required
