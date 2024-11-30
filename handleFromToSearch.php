@@ -2,7 +2,7 @@
 session_start();
 include 'connection.php';
 include 'header.php';
-
+date_default_timezone_set('Asia/Dhaka'); 
 if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
     // Placeholder for any session-related actions
 }
@@ -11,6 +11,17 @@ $from = $_POST['from'];
 $to = $_POST['to'];
 $date = $_POST['date'];
 $_SESSION['bus_date'] = $date;
+
+$today = date('Y-m-d');
+if($date<$today)//if user selects a date before today then show error message
+{
+    echo "Invalid Date";
+    exit();
+}else
+{
+    echo $date."<br>";
+    echo $today;
+}
 
 
 //check is bus available on that date
@@ -129,7 +140,6 @@ if ($result->num_rows > 0 && $bus_available) {
             'capacity' => $capacity,
             'date' => $date,
             'price' => $total_price,
-            'fVisitPage' => 'NULL',
             'from' => $from_location,
             'to' => $to_location,
             'from_final_time' => $final_from_time,
@@ -188,7 +198,7 @@ if ($result->num_rows > 0 && $bus_available) {
                             <div class="text-lg font-bold text-gray-700">BDT <?= $total_price ?></div>
                         </div>
                         <div>
-                            <a href="ticketPanel.php?info=<?= base64_encode(json_encode($queryParams)) ?>&&fVisitPage=NULL" class="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600 flex items-center space-x-2">
+                            <a href="ticketPanel.php?info=<?= base64_encode(json_encode($queryParams)) ?>&& fVisitPage=1" class="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600 flex items-center space-x-2">
                                 <button
                                     class="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600 flex items-center space-x-2">
                                     <span>View Seats</span>

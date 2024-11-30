@@ -4,10 +4,17 @@ include 'connection.php';
 
 //fetch bus_code-> bus seats from data base only at once not every refresh time
 //$_SESSION['seats'] = NULL;
+//echo isset($_GET['fVisitPage']) . "<br>";
+//echo $_GET['info']."<br>";
+//print_r($_SESSION['seats']);
+
 if (isset($_GET['fVisitPage'])) {//VERY IMPORTANT-----
-    $_SESSION['seats'] = NULL;
+   unset($_SESSION['seats']);
+    unset($_SESSION['tmpSeats']);
+    //echo !isset($_SESSION['seats']);
 }
-if (!isset($_SESSION['seats']) && isset($_GET['info']) ) {
+//print_r($_SESSION['seats']);
+if (!isset($_SESSION['seats']) ) {
 
     //all important information in $info
 
@@ -16,9 +23,9 @@ if (!isset($_SESSION['seats']) && isset($_GET['info']) ) {
         $jsonString = base64_decode($infoString);
         $info = json_decode($jsonString, true);
         $_SESSION['info'] = $info;
-        $_SESSION['info']['price']=$_SESSION['info']['price']??0;
+        $_SESSION['info']['price'] = $_SESSION['info']['price'] ?? 0;
 
-
+       //echo "ami seats ar tmp paisi";
         //print_r($info);
         //echo $info . "<br>";
 
@@ -30,8 +37,8 @@ if (!isset($_SESSION['seats']) && isset($_GET['info']) ) {
 
 
     // echo "esece";
-    $date = $_GET['date'] ?? $_SESSION['date'];
-    $bus_code = $_GET['bus_code'] ?? $_SESSION['bus_code'];
+    $date = $_SESSION['info']['date'];
+    $bus_code = $_SESSION['info']['bus_code'];
     $formattedDate = (new DateTime($date))->format('Y_m_d');
     $_SESSION['table_name'] = $formattedDate;
 
@@ -55,7 +62,7 @@ if (!isset($_SESSION['seats']) && isset($_GET['info']) ) {
 
 
     $_SESSION['price'] = 0;
-    $_SESSION['pricePerSeat'] = (int)$_SESSION['info']['price']?? (int) $_SESSION['price'];
+    $_SESSION['pricePerSeat'] = (int) $_SESSION['info']['price'] ?? (int) $_SESSION['price'];
     // echo $_SESSION['pricePerSeat']."  ".$_SESSION['price'];
 
     $_SESSION['visitFlag'] = true;
@@ -70,35 +77,6 @@ if (!isset($_SESSION['seats']) && isset($_GET['info']) ) {
     }
     $_SESSION['seats'] = $result->fetch_all(MYSQLI_ASSOC);
     $_SESSION['tmpSeats'] = [];
-}
-
-
-
-
-
-// Check if GET parameters or session variables are available
-if (isset($_GET['bus_code']) && isset($_GET['capacity']) && isset($_GET['date']) && isset($_GET['price'])) {
-    $bus_code = $_GET['bus_code'];
-    $capacity = $_GET['capacity'];
-    $date = $_GET['date'];
-
-
-
-    // Save to session
-    $_SESSION['bus_code'] = $bus_code;
-    $_SESSION['capacity'] = $capacity;
-    $_SESSION['date'] = $date;
-
-    $price = (int) $_GET['price'];
-    $_SESSION['price'] = 0;
-    $_SESSION['pricePerSeat'] = (int) $_GET['price'];
-} elseif (isset($_SESSION['bus_code']) && isset($_SESSION['capacity']) && isset($_SESSION['date']) && isset($_SESSION['price'])) {
-    $bus_code = $_SESSION['bus_code'];
-    $capacity = $_SESSION['capacity'];
-    $date = $_SESSION['date'];
-
-} else {
-    die("Error: Missing required parameters (bus_code, capacity, date).");
 }
 
 
@@ -135,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['updateSeats'])) {
     $name = "";
     $phone_number = "";
     $email = "";
-    $bus_code = $_SESSION['bus_code'];
+    $bus_code = $_SESSION['info']['bus_code'];
     $table = $_SESSION['table_name'];
     if (isset($_POST['name']) && isset($_POST['phone_number']) && isset($_POST['email'])) {
         $name = $_POST['name'];

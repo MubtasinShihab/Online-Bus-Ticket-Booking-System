@@ -7,7 +7,44 @@ $info = $_SESSION['info'];
 
 
 
+if (isset($_GET['confirm']) && $_GET['confirm'] == 'confirm') {
 
+    /*
+    foreach ($_SESSION as $key => $value) {
+        if ($key == 'user_id') {
+            continue;
+
+        } elseif ($key == 'loggedIn') {
+            continue;
+
+        }elseif()
+         else {
+            unset($_SESSION[$key]);
+        }
+    }
+        */
+        unset($_SESSION['info']);
+        unset($_SESSION['bus_code']);
+        unset($_SESSION['capacity']);
+        unset($_SESSION['bus_id']);
+        unset($_SESSION['bus_name']);
+        unset($_SESSION['bus_type']);
+        unset($_SESSION['bus_code']);
+        unset($_SESSION['from']);
+        unset($_SESSION['to']);
+        unset($_SESSION['from_point_location']);
+        unset($_SESSION['to_point_location']);
+        unset($_SESSION['from_final_time']);
+        unset($_SESSION['to_final_time']);
+        unset($_SESSION['total_price']);
+        unset($_SESSION['booked_seats']);
+        unset($_SESSION['price']);
+        unset($_SESSION['pricePerSeat']);
+        
+
+    header('location:userHome.php');
+
+}
 
 ?>
 <!DOCTYPE html>
@@ -129,9 +166,15 @@ $info = $_SESSION['info'];
             <img class="mx-auto" src="https://i.ibb.co.com/R6kPHx7/fare.png" alt="">
             <!-- Fare rate -->
             <p class="leading-10 mt-6">
-                <span class="font-bold text-3xl">৳ <?= $info['price'] ?> Taka</span> <br>
+                <span class="font-bold text-3xl">৳ <?= $info['total_price'] ?> Taka</span> <br>
+            <form method="GET" action="">
+                <button type="submit" name="confirm" value="confirm"><span
+                        class="font-bold text-3xl">Confirm</span></button> <br>
+
+            </form>
 
             </p>
+
         </div>
 
     </div>
