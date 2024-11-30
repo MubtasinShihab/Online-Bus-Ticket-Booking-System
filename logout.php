@@ -7,6 +7,7 @@ if (isset($_SESSION['user_id'])) {
     $sql = "UPDATE user SET last_login = NOW() WHERE id = " . $_SESSION['user_id'];
     if ($conn->query($sql) === TRUE) {
         echo "Last login updated for user";
+       
     } else {
         echo "Error updating user last login: " . $conn->error;
     }
@@ -17,6 +18,7 @@ if (isset($_SESSION['admin_id'])) {
     $sql = "UPDATE admin SET last_login = NOW() WHERE id = " . $_SESSION['admin_id'];
     if ($conn->query($sql) === TRUE) {
         echo "Last login updated for admin";
+       
     } else {
         echo "Error updating admin last login: " . $conn->error;
     }
@@ -41,8 +43,8 @@ if (ini_get("session.use_cookies")) {
 
 // Destroy the session
 session_destroy();
-
-// Redirect to login page
 header('Location: login.php');
+// Redirect to login page
+
 exit();
 ?>
