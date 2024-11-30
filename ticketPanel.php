@@ -4,11 +4,32 @@ include 'connection.php';
 
 //fetch bus_code-> bus seats from data base only at once not every refresh time
 //$_SESSION['seats'] = NULL;
-if (isset($_GET['fVisitPage'])) {
+if (isset($_GET['fVisitPage'])) {//VERY IMPORTANT-----
     $_SESSION['seats'] = NULL;
 }
-if ( !isset($_SESSION['seats'])  ) {
-   // echo "esece";
+if (!isset($_SESSION['seats']) && isset($_GET['info']) ) {
+
+    //all important information in $info
+
+    if (isset($_GET['info'])) {
+        $infoString = $_GET['info'];
+        $jsonString = base64_decode($infoString);
+        $info = json_decode($jsonString, true);
+        $_SESSION['info'] = $info;
+        $_SESSION['info']['price']=$_SESSION['info']['price']??0;
+
+
+        //print_r($info);
+        //echo $info . "<br>";
+
+    }
+
+
+    //this data comes from handleFromToSearch.php file
+
+
+
+    // echo "esece";
     $date = $_GET['date'] ?? $_SESSION['date'];
     $bus_code = $_GET['bus_code'] ?? $_SESSION['bus_code'];
     $formattedDate = (new DateTime($date))->format('Y_m_d');
@@ -20,6 +41,7 @@ if ( !isset($_SESSION['seats'])  ) {
         die("SQL Error: " . $conn->error);
     }
     $_SESSION['seats'] = $result->fetch_all(MYSQLI_ASSOC);
+    // print_r($_SESSION['seats']);
     $_SESSION['tmpSeats'] = [];
 
     //PRINT seats
@@ -33,16 +55,14 @@ if ( !isset($_SESSION['seats'])  ) {
 
 
     $_SESSION['price'] = 0;
-    $_SESSION['pricePerSeat'] = (int) $_GET['price'] ?? (int) $_SESSION['price'];
+    $_SESSION['pricePerSeat'] = (int)$_SESSION['info']['price']?? (int) $_SESSION['price'];
     // echo $_SESSION['pricePerSeat']."  ".$_SESSION['price'];
 
     $_SESSION['visitFlag'] = true;
-}
-elseif(count($_SESSION['seats']) == 0 )
-{
+} elseif (count($_SESSION['seats']) == 0) {
     $table = $_SESSION['table_name'];
     $bus_code = $_SESSION['bus_code'];
-    
+
     $sql = "SELECT * FROM $table WHERE bus_code = $bus_code;";
     $result = $conn->query($sql);
     if (!$result) {
@@ -83,7 +103,7 @@ if (isset($_GET['bus_code']) && isset($_GET['capacity']) && isset($_GET['date'])
 
 
 
-if (isset($_GET['seat_name'])) {
+if (isset($_GET['seat_name']) && $_SERVER['REQUEST_METHOD'] === 'GET') {
     $seat_name = $_GET['seat_name'];
     foreach ($_SESSION['seats'] as $seat) {
         if ($seat['seat_name'] === $seat_name) {
@@ -112,34 +132,34 @@ if (isset($_GET['seat_name'])) {
 // Handle "Next" button submission to update the database
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['updateSeats'])) {
 
-    $name ="";
-    $phone_number ="";
-    $email ="";
+    $name = "";
+    $phone_number = "";
+    $email = "";
     $bus_code = $_SESSION['bus_code'];
     $table = $_SESSION['table_name'];
-    if(isset($_POST['name']) && isset($_POST['phone_number']) && isset($_POST['email']))
-    {
+    if (isset($_POST['name']) && isset($_POST['phone_number']) && isset($_POST['email'])) {
         $name = $_POST['name'];
         $phone_number = $_POST['phone_number'];
         $email = $_POST['email'];
-    }
-    else{
+    } else {
         echo "<script>alert('Please fill all the fields');</script>";
-          
+
     }
     foreach ($_SESSION['tmpSeats'] as $seat) {
         $seat_name = $seat['seat_name'];
-      
+
         $updateSql = "UPDATE $table SET status = 'booked', booked_date = CURDATE(), booked_user_id = 1, name = '$name', phone_number = '$phone_number', email = '$email' WHERE bus_code = $bus_code AND seat_name = '$seat_name'";
         if (!$conn->query($updateSql)) {
             die("Database Update Error: " . $conn->error);
         }
     }
     // Clear tmpSeats after updating the database
-    $_SESSION['tmpSeats'] = [];
-    $_SESSION['seats'] =[];
+    $_SESSION['info']['total_price'] = $_SESSION['price'];
+    $_SESSION['info']['booked_seats'] = $_SESSION['tmpSeats'];
+    $_SESSION['seats'] = [];
 
     echo "<script>alert('Seats successfully booked!');</script>";
+    header("Location: finalTicket.php?info=" . base64_encode(json_encode($_SESSION['info'])));
 }
 
 
@@ -360,7 +380,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['updateSeats'])) {
                         </label>
                     </div>
 
-                     <!-- next button -->
+                    <!-- next button -->
                     <div>
                         <button id="next-btn" type="submit" name="updateSeats"
                             class="btn w-full h-16 bg-[#1DD100] font-raleway text-xl font-extrabold text-white">

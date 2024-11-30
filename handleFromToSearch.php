@@ -10,6 +10,7 @@ if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
 $from = $_POST['from'];
 $to = $_POST['to'];
 $date = $_POST['date'];
+$_SESSION['bus_date'] = $date;
 
 
 //check is bus available on that date
@@ -72,9 +73,14 @@ if ($result->num_rows > 0 && $bus_available) {
 
         $bus_code = $row['bus_code'];
         $from_location = $row['from_location'];
+
+
+
         $from_time_1 = $row['from_time_1'];
         $from_time_2 = $row['from_time_2'];
         $to_location = $row['to_location'];
+
+
         $to_time_1 = $row['to_time_1'];
         $to_time_2 = $row['to_time_2'];
         $from_point_location = $row['from_point_location'];
@@ -95,15 +101,19 @@ if ($result->num_rows > 0 && $bus_available) {
         if ($from_location_level < $to_location_level) {
             $final_from_time = $from_time_1;
             $final_to_time = $to_time_1;
+            echo $final_from_time . " " . $final_to_time;
         } else if ($from_location_level > $to_location_level) {
             $final_from_time = $from_time_2;
             $final_to_time = $to_time_2;
+            echo $final_from_time . " " . $final_to_time;
+
         } else {
             // Optional: handle case where levels are equal
             $final_from_time = $from_time_1;
             $final_to_time = $to_time_1;
         }
 
+        
 
         $new_sql = "SELECT COUNT(location) AS location_count FROM bus_stop WHERE bus_code = '$bus_code' GROUP BY bus_code";
 
@@ -113,6 +123,22 @@ if ($result->num_rows > 0 && $bus_available) {
 
         $per_stop_price = round(($price / ($location_count - 1)));
         $total_price = $per_stop_price * abs($from_location_level - $to_location_level);
+
+        $queryParams = [
+            'bus_code' => $bus_code,
+            'capacity' => $capacity,
+            'date' => $date,
+            'price' => $total_price,
+            'fVisitPage' => 'NULL',
+            'from' => $from_location,
+            'to' => $to_location,
+            'from_final_time' => $final_from_time,
+            'to_final_time' => $final_to_time,
+            'coach_type' => $coach_type,
+            'via_road' => $via_road,
+            'from_point_location' => $from_point_location
+        ];
+        print_r($queryParams);
         ?>
 
         <?php if (validBusTime($final_from_time, $final_to_time, $date)) { ?>
@@ -162,8 +188,7 @@ if ($result->num_rows > 0 && $bus_available) {
                             <div class="text-lg font-bold text-gray-700">BDT <?= $total_price ?></div>
                         </div>
                         <div>
-                            <a
-                                href="ticketPanel.php?bus_code=<?= $bus_code ?>&& capacity=<?= $capacity ?> && date=<?= $date ?> && price=<?= $total_price ?>&& fVisitPage=<?php echo 'NULL' ?>">
+                            <a href="ticketPanel.php?info=<?= base64_encode(json_encode($queryParams)) ?>&&fVisitPage=NULL" class="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600 flex items-center space-x-2">
                                 <button
                                     class="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600 flex items-center space-x-2">
                                     <span>View Seats</span>
@@ -184,8 +209,7 @@ if ($result->num_rows > 0 && $bus_available) {
 
     }
 
-}
-else{
+} else {
     echo "No Bus Found";
 }
 
