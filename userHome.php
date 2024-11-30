@@ -6,6 +6,10 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
         header('Location: login.php');
         exit();
     }
+}else
+{
+    header('Location: login.php');
+  
 }
  include 'header.php';
 ?>
@@ -20,7 +24,13 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
                 class="text-sm  text-gray-500 dark:text-white hover:underline"><?= $_SESSION['user_email']; ?></a>
             <a href="logout.php" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Logout</a>
         </div>
+        <div class="flex items-center space-x-2 rtl:space-x-reverse">
+            
+            <a href="ticketOperation.php" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Ticket Operation</a>
+        </div>
+
     </div>
+</nav>
 <!-- User Home Page with html and css -->
 
 <?php include 'footer.php';?>
